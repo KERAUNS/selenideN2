@@ -10,12 +10,12 @@ public class TestSelenideN2 {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://github.com";
+        Configuration.holdBrowserOpen = true;
     }
-
     @Test
     void enterpriseHoveTest() {
         open("/");
         $(byText("Solutions")).hover().parent().$("div.HeaderMenu-dropdown").$(byText("Enterprise")).click();
-        $("h1").shouldHave(text("Build like the best"));
+        $("div.enterprise-hero").$("h1").shouldHave(text("Build like the best"));//shouldHave(text("Build like the best"));
     }
 }
