@@ -16,6 +16,6 @@ public class TestSelenideN2 {
     void enterpriseHoveTest() {
         open("/");
         $(byText("Solutions")).hover().parent().$("div.HeaderMenu-dropdown").$(byText("Enterprise")).click();
-        $("div.enterprise-hero").$("h1").shouldHave(text("Build like the best"));//shouldHave(text("Build like the best"));
+        $("div.enterprise-hero").$("h1").shouldHave(text("Build like the best"));
     }
 }
